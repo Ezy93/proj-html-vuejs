@@ -5,11 +5,13 @@
 </template>
 
 <script>
+
+
 export default {
     name:'indexFooter'
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 
 </style>

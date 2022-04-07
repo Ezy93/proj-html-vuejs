@@ -5,11 +5,13 @@
 </template>
 
 <script>
+
+
 export default {
     name:'indexMain',
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 
 </style>
