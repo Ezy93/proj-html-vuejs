@@ -24,8 +24,18 @@
         </nav>
         <div class="my-jumbotron">
             <div class="container-fluid">
+                <!-- conterrà i piccoli quadratini con demos e sale -->
+                <div class="row">
+                    <div class="col-12">
 
+                    </div>
+
+                    <div class="col-12">
+
+                    </div>
+                </div>
             </div>
+            <!-- conterrà explore our products -->
             <div class="container">
 
             </div>
