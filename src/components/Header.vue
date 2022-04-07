@@ -1,5 +1,5 @@
 <template>
-    <header class="container-fluid">
+    <header class="container-fluid bg-transparent">
         <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-between">
             <!-- logo della navbar -->
             <a class="navbar-brand" href="#">
@@ -7,13 +7,13 @@
             </a>
             
             <!-- links della navbar aggiunti dinamicamente  -->
-            <div>
+            <div class="my-links-container">
                 <ul class="navbar-nav mr-auto d-flex align-items-center">
                     <li class="nav-item active mx-2" v-for="(element,index) in navbarLinks" :key="index">
-                        <a class="nav-link text-uppercase" href="#">{{element}}</a>
+                        <a class="nav-link text-uppercase my-title" href="#">{{element}}</a>
                     </li>
                     <li class="nav-item">
-                        <font-awesome-icon icon="fa-solid fa-cart-shopping" />
+                        <font-awesome-icon icon="fa-solid fa-cart-shopping" class="my-title" />
                     </li>
                 </ul>
                 
@@ -23,7 +23,6 @@
 </template>
 
 <script>
-
 
 export default {
     name: 'indexHeader',
@@ -45,5 +44,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    
+@import '../scss/_variables.scss';
+
+    nav.navbar{
+
+        div.my-links-container{
+
+            ul.navbar-nav{
+
+                .my-title{
+                    
+                    color: $Title_color;
+                    
+                }
+            }
+        }
+    }
 </style>
