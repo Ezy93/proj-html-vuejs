@@ -52,8 +52,17 @@
                 </div>
             </div>
             <!-- conterrà explore our products -->
-            <div class="container">
-
+            <div class="container my-relative">
+                <div class="row">
+                    <div class="col-4">
+                        <p class="text-uppercase">fresh & tasty bakery every day</p>
+                        <h1 class="fw-bolder"> The Perfect Fresh Bread  </h1>
+                        <p>Cras consequat lectus vestibulum tortor pulvinar, quis eusimod nisl varius.Aliquam erat volutpat. Nullam quis sagittis nibh ac nulla id orci tempor</p>
+                        <div class="btn mt-3">
+                            <a href="#" class="px-3">explore our products</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -93,8 +102,6 @@ header{
             top: 8rem;
         }
         div.row{
-            
-            
             div.my-demo,
             div.my-sale{
                 width: 3rem;
@@ -112,6 +119,27 @@ header{
                     color: $OnSale_text;
                     sup{
                         font-size: .7rem;
+                    }
+                }
+            }
+        }
+        div.my-relative{
+            position: relative;
+            top: 17rem;
+            div.row{
+                div.col-4{
+                    h1{
+                        color: $Title_color;
+                    }
+                    p{
+                        color: $Mamba;
+                    }
+                    div.btn{
+                        background-color: white;
+                        a{
+                            text-decoration: none;
+                            color: $Title_color;
+                        }
                     }
                 }
             }
