@@ -68,6 +68,13 @@ export default {
                         color: white;
                     }
                 }
+                div.btn:hover{
+                    background-color: $perfume;
+                    a{
+                        text-decoration: none;
+                        color: $Title_color;
+                    }
+                }
             }
         }
         div.col-9{

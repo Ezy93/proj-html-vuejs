@@ -21,7 +21,7 @@
                     </div>
 
                     <div>
-                        <div class="btn p-2 rounded-3 w-50 bg-white">
+                        <div class="btn p-2 rounded-3 w-50 ">
                             <a href="#">View Map</a>
                         </div>
                     </div>
@@ -90,6 +90,16 @@ section.row{
                             color: $Title_color;
                             font-size: .8rem;
                             
+                        }
+                        
+                        div.btn{
+                            background-color: white;
+                        }
+                        div.btn:hover{
+                            background-color: $Title_color;
+                            a{
+                                color:white
+                            }
                         }
                     }
                 }

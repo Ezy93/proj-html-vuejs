@@ -5,7 +5,7 @@
             <div class="col-4 mb-5 mt-4 offset-2">
                 <p>try our seasonal products</p>
                 <h3 class="text-white fw-bolder mt-2">Order for pick-up or delivery to your home</h3>
-                <div class="btn bg-white my-5">
+                <div class="btn my-5">
                     <a href="#" class="px-3">Shop Now</a>
                 </div>
             </div>
@@ -41,7 +41,7 @@
                         <div class="d-flex justify-content-end w-100 mt-4">
                             <input class="w-50" type="email" name="" id="" placeholder="Enter email address*">
                             <div class="btn py-1 ms-3">
-                                <a href="#" class="text-white">Subscribe</a>
+                                <a href="#" >Subscribe</a>
                             </div>
                         </div>
                     </div>
@@ -103,10 +103,16 @@ export default {
                 color: $manatee;
             }
             div.btn{
-
+                background-color: white;
                 a{
                     text-decoration: none;
                     color: $Title-color;
+                }
+            }
+            div.btn:hover{
+                background-color: $Title_color;
+                a{
+                    color: white
                 }
             }
         }
@@ -116,7 +122,7 @@ export default {
                 nav.col-6{
                     div.footer-nav{
                         ul.d-flex{
-                            color: $Title-color;
+                            color: $Title_color;
                             list-style: none;
                             li{
                                 div.object-in-cart{
@@ -131,14 +137,18 @@ export default {
                         color: $Title_color;
                     }
                     div{
-                        input{
-    
-                        }
+                        
                         div.btn{
                             background-color: $Title_color;
                             a{
+                                color: white;
                                 text-decoration: none;
-                                
+                            }
+                        }
+                        div.btn:hover{
+                            background-color: $perfume;
+                            a{
+                                color: $Title_color;
                             }
                         }
                     }

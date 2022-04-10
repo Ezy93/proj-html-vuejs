@@ -94,6 +94,17 @@ export default {
                 p{
                     font-size: .8rem;
                 }
+                
+            }
+            div.btn:hover{
+                background-color: $perfume;
+                p{
+                    color: $Title_color;
+                }
+                svg{
+                    
+                    filter: none;
+                }
             }
         }
     }

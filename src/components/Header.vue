@@ -147,8 +147,15 @@ header{
                     div.btn{
                         background-color: white;
                         a{
-                            text-decoration: none;
                             color: $Title_color;
+                            text-decoration: none;
+                        }
+                        
+                    }
+                    div.btn:hover{
+                        background-color: $Title_color;
+                        a{
+                            color: white;
                         }
                     }
                 }

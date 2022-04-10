@@ -42,6 +42,13 @@ export default {
                             text-decoration: none;
                             color: white;
                         }
+                        
+                    }
+                    div.btn:hover{
+                        background-color: $perfume;
+                        a{
+                            color: $Title_color;
+                        }
                     }
                 }
             
