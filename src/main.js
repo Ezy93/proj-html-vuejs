@@ -7,13 +7,16 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 
 /* import specific icons */
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
+import { faCopyright } from '@fortawesome/free-solid-svg-icons'
+import { faInstagram , faTwitter , faFacebook , faPinterest } from '@fortawesome/free-brands-svg-icons'
 
 
 /* import font awesome icon component */
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* add icons to the library */
-library.add(faCartShopping)
+library.add(faCartShopping ,faCopyright , faInstagram , faTwitter, faFacebook, faPinterest)
+
 
 /* add font awesome icon component */
 Vue.component('font-awesome-icon', FontAwesomeIcon)
