@@ -1,5 +1,6 @@
 <template>
     <footer class="mt-5 pt-5">
+        <!-- parte superiore del footer che porta allo shop -->
         <div class="top-footer p-5 row">
             <div class="col-4 mb-5 mt-4 offset-2">
                 <p>try our seasonal products</p>
@@ -9,6 +10,7 @@
                 </div>
             </div>
         </div>
+        <!-- parte inferiore del footer con le info di conttato ed i social -->
         <div class="bot-footer">
 
         </div>

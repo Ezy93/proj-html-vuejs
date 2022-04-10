@@ -85,7 +85,15 @@ export default {
                 'my account',
             ]
         }
+        
+    },
+    created: function(){
+        
+    },
+    methods:{
+        
     }
+
 }
 </script>
 

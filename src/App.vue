@@ -18,6 +18,14 @@ export default {
     Main,
     Header,
     Footer,
+  },
+  data:function(){
+    return{
+      newNavbar:[]
+    }
+  },
+  methods:{
+    
   }
 }
 </script>
