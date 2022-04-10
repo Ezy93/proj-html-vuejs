@@ -7,10 +7,22 @@
         <div class="col-12">
             <div class="row justify-content-between">
                 <div class="col-6 my-corporate me-5">
-
+                    <div class="description-hover align-items-center h-100  flex-column justify-content-center ">
+                        <p class="text-uppercase">international bakery</p>
+                        <h3 class="fw-bold">Corporate Events</h3>
+                        <div class="btn w-25 mt-3">
+                            <a href="#">Explore more</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-6 my-wedding">
-
+                    <div class="description-hover align-items-center h-100  flex-column justify-content-center ">
+                        <p class="text-uppercase">private dining hall</p>
+                        <h3 class="fw-bold">Wedding & parties</h3>
+                        <div class="btn w-25 mt-3">
+                            <a href="#">Explore more</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -41,10 +53,51 @@ export default {
                 
                 div.my-corporate{
                     background-image: url('../../assets/images/corporate-bg.jpg');
-                    
+                    div.description-hover{
+                        display: none;
+                        p,
+                        h3,
+                        a{
+                            color: white;
+                        }
+                        
+                        div.btn{
+                            background-color: $Title_color;
+                            a{
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+                div.my-corporate:hover{
+                    background-image: url('../../assets/images/corporate-hover-bg.jpg');
+                    div.description-hover{
+                        display: flex;
+                    }
                 }
                 div.my-wedding{
                     background-image: url('../../assets/images/wedding-bg.jpg');
+                        div.description-hover{
+                            display: none;
+                        p,
+                        h3,
+                        a{
+                            color: white;
+                        }
+                        
+                        div.btn{
+                            background-color: $Title_color;
+                            a{
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+                div.my-wedding:hover{
+                    background-image: url('../../assets/images/wedding-hover-bg.jpg');
+                    div.description-hover{
+                        display: flex;
+                    }
                 }
                 .my-corporate,
                 .my-wedding{

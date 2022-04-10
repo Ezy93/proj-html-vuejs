@@ -167,7 +167,9 @@ header{
         div.my-links-container{
             right: 12px;
             ul.navbar-nav{
-
+                li:hover{
+                    border-bottom:  2px solid $Title_color;
+                }
                 .my-title{
                     
                     color: $Title_color;
