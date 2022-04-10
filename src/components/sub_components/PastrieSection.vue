@@ -11,8 +11,34 @@
         <!-- carousel statico  -->
         <div class="col-8 pe-0">
             <div class="my-thumb-container d-flex justify-content-end">
-                <img :src="require('../../assets/images/choco-chip-cookies-400x510.jpg')" alt="">
-                <img class="ms-3" :src="require('../../assets/images/choco-chip-cookies-400x510.jpg')" alt="">
+                <div class="my-thumb position-relative">
+                    
+                    <div class="previous position-absolute py-4 px-3">
+                        <font-awesome-icon icon="fa-solid fa-angle-left" class="text-white" />
+                    </div>
+                    <div class="d-flex">
+                        <div class="position-relative">
+                            <div class="position-absolute h-100 w-100 text-center flex-column justify-content-center text-white">
+                                <h4>Choco Chip Cookies</h4>
+                                <p>Cookies, Pastries</p>
+                                <h3>$19.00 $39.00</h3>
+                            </div>
+                            <img :src="require('../../assets/images/choco-chip-cookies-400x510.jpg')" alt="">
+                        </div>
+                        <div class="position-relative"> 
+                            <div class="position-absolute h-100 text-center flex-column justify-content-center text-white ms-3 my-width">
+                                <h4>Choco Chip Cookies</h4>
+                                <p>Cookies, Pastries</p>
+                                <h3>$19.00 $39.00</h3>
+                            </div>                       
+                            <img class="ms-3" :src="require('../../assets/images/choco-chip-cookies-400x510.jpg')" alt="">
+                        </div>
+                    </div>
+                    <div class="next position-absolute py-4 px-3">
+                        <font-awesome-icon icon="fa-solid fa-angle-right" class="text-white" />
+                    </div>
+                    
+                </div>
             </div>
         </div>
 
@@ -22,6 +48,11 @@
 <script>
 export default {
     name: 'PastrieSection',
+    data: function(){
+        return{
+
+        }
+    }
 }
 </script>
 
@@ -48,6 +79,42 @@ export default {
                         background-color: $perfume;
                         a{
                             color: $Title_color;
+                        }
+                    }
+                }
+                div.col-8{
+                    div.my-thumb-container{
+                        div.my-thumb{
+                            div.d-flex{
+                                div.position-relative{
+                                    div.position-absolute{
+                                        background-color: rgba($manatee, 0.5);
+                                        display: none;
+                                    }
+
+                                    div.my-width{
+                                        width: 96%;
+                                    }
+                                }
+                                div.position-relative:hover{
+                                    div.position-absolute{
+                                        display: flex;
+                                    }
+                                }
+                            }
+                            div.previous{
+                                z-index: 1;
+                            }
+                            div.previous,
+                            div.next{
+                                top: 45%;
+                                background-color: rgba($perfume,0.5)
+                            }
+                            div.next{
+                                right: 0;
+                                
+                            }
+
                         }
                     }
                 }
