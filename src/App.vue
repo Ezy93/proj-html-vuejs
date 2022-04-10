@@ -32,5 +32,8 @@ export default {
 
 <style lang="scss" scoped>
 @import './scss/style.scss';
+  #app{
+    overflow-x: hidden;
+  }
 
 </style>

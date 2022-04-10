@@ -1,6 +1,6 @@
 <template>
     <header class="bg-transparent position-relative">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light container-fluid position-fixed top-0 bg-transparent">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light container-fluid position-absolute top-0 bg-transparent">
 
             <!-- logo della navbar -->
             <a class="navbar-brand" href="#">
@@ -23,7 +23,7 @@
             
         </nav>
         <div class="my-jumbotron position-relative">
-            <div class="container-fluid position-fixed">
+            <div class="container-fluid position-absolute">
                 <!-- conterrà i piccoli quadratini con demos e sale -->
                 <div class="row">
                     <div class="col-12 d-flex justify-content-end">
@@ -108,6 +108,7 @@ header{
         background-size: cover;
         div.container-fluid{
             top: 8rem;
+            right: 1rem;
         }
         div.row{
             div.my-demo,
