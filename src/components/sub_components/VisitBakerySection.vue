@@ -1,6 +1,6 @@
 <template>
-    <section class="row">
-        <div class="col-12 text-center py-5">
+    <section class="row pb-3">
+        <div class="col-12 text-center">
             <p class="text-uppercase">location</p>
             <h4 class="fw-bolder">Visit Our Bakeries</h4>
         </div>

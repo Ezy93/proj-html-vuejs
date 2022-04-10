@@ -5,6 +5,7 @@
         <FreshlySection></FreshlySection>
         <BannerSection></BannerSection>
         <VisitBakerySection></VisitBakerySection>
+        <SharingSection></SharingSection>
 
     </main>
 </template>
@@ -15,6 +16,7 @@ import SpecialSection from './sub_components/SpecialSection.vue';
 import FreshlySection from './sub_components/FreshlySection.vue';
 import BannerSection  from './sub_components/BannerSection.vue';
 import VisitBakerySection from './sub_components/VisitBakerySection.vue';
+import SharingSection from './sub_components/SharingSection.vue'
 
 export default {
     name:'indexMain',
@@ -24,6 +26,7 @@ export default {
         FreshlySection,
         BannerSection,
         VisitBakerySection,
+        SharingSection,
     }
 }
 </script>
