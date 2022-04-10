@@ -41,7 +41,7 @@
                     </div>
 
                     <div class="col-12  mt-2 d-flex justify-content-end">
-                        <div class="my-demo rounded-3 text-center">
+                        <div class="my-sale rounded-3 text-center">
                             <h5 class="fw-bolder mb-0 mt-1">
                                 <sup>$</sup>39
                             </h5>
@@ -115,6 +115,7 @@ header{
                 width: 3rem;
                 height: 3rem;
                 background-color: white;
+                box-shadow: 2px 1px 20px 5px rgba(0, 0, 0 ,0.2);
                 svg{
                     fill: $outer_space;
                     padding: .2rem;
