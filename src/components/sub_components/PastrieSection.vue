@@ -13,28 +13,21 @@
             <div class="my-thumb-container d-flex justify-content-end">
                 <div class="my-thumb position-relative">
                     
-                    <div class="previous position-absolute py-4 px-3">
+                    <div class="previous position-absolute py-4 px-3" @click="previous()">
                         <font-awesome-icon icon="fa-solid fa-angle-left" class="text-white" />
                     </div>
                     <div class="d-flex" >
-                        <div class="position-relative" >
+                        <div class="position-relative ms-3" :key="index" v-for="(element , index) in pastriesArray" :class="(activeElement === element.thumbID) ? 'd-inline':'d-none'">
                             <div class="position-absolute h-100 w-100 text-center flex-column justify-content-center text-white">
-                                <h4>Choko Chip Cookies</h4>
-                                <p>Cookies , Pastries</p>
-                                <h3>$36.00 - $30.00</h3>
+                                <h4>{{element.name}}</h4>
+                                <p>{{element.type}}</p>
+                                <h3>{{element.price}}</h3>
                             </div>
-                            <img :src="require('../../assets/images/choco-chip-cookies-400x510.jpg')" alt="">
+                            <img :src="require(`../../assets/images/${element.img}-400x510.jpg`)" alt="">
                         </div>
-                        <div class="position-relative"> 
-                            <div class="position-absolute h-100 text-center flex-column justify-content-center text-white ms-3 my-width">
-                                <h4>Strawberry Jam Cookies</h4>
-                                <p>Cookies , Pastries</p>
-                                <h3>$36.00 - $60.00</h3>
-                            </div>                       
-                            <img class="ms-3" :src="require('../../assets/images/strawberry-jam-cookies-400x510.jpg')" alt="">
-                        </div>
+                        
                     </div>
-                    <div class="next position-absolute py-4 px-3">
+                    <div class="next position-absolute py-4 px-3" @click="next()">
                         <font-awesome-icon icon="fa-solid fa-angle-right" class="text-white" />
                     </div>
                     
@@ -50,35 +43,56 @@ export default {
     name: 'PastrieSection',
     data: function(){
         return{
-            activeElement: 0,
+            activeElement: 1,
             pastriesArray:[
             
                     {
                         name: 'Choko Chip Cookies',
                         type: 'Cookies , Pastries',
                         price: '$18.00 - $32.00',
+                        img: 'choco-chip-cookies',
+                        thumbID: 1
                     },
                     {
                         name: 'Strawberry Jam Cookies',
                         type: 'Cookies , Pastries',
                         price: '$36.00 - $60.00',
+                        img: 'strawberry-jam-cookies',
+                        thumbID: 1
                     },
-                
-
-            
                     {
                         name: 'Cookies with ice cream',
                         type: 'Cookies , Pastries',
                         price: '$18.00 - $34.00',
+                        img: 'cookies-with-ice-cream',
+                        thumbID: 2
                     },
                     {
                         name: 'Homemade Bread',
                         type: 'Breads , Pastries',
                         price: '$26.00 - $68.00',
+                        img: 'home-bread',
+                        thumbID: 2
                     },
             
             ]
         }
+    },
+    methods:{
+        previous(){
+            this.activeElement--
+            if(this.activeElement < 1){
+                this.activeElement = 2
+            }
+        },
+        next(){
+            this.activeElement++
+            if(this.activeElement > 2){
+                this.activeElement = 1
+            }
+            
+        }
+
     }
 }
 </script>
@@ -131,6 +145,7 @@ export default {
                             }
                             div.previous{
                                 z-index: 1;
+                                left: 1rem;
                             }
                             div.previous,
                             div.next{

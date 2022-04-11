@@ -14,10 +14,10 @@
         <div class="col-9 pe-0">
             <div class="my-thumbs-container">
                 <div class="my-thumb d-flex justify-content-end gap-3 w-100 position-relative">
-                    <div class="previous position-absolute py-4 px-3">
+                    <div class="previous position-absolute py-4 px-3" @click="previous()">
                         <font-awesome-icon icon="fa-solid fa-angle-left" class="text-white" />
                     </div>
-                    <div class="thumb text-center position-relative">
+                    <div class="thumb text-center position-relative" :key="index" v-for="(element , index) in sliderItems" :class="(element.ID === activeElement) ? 'd-inline':'d-none'">
                         <div class="w-100  position-absolute my-hover align-items-center justify-content-center">
                             <p class="text-uppercase">
                                 <a href="#">select options</a>
@@ -25,47 +25,12 @@
                                 <a href="#">quick view</a>
                             </p>
                         </div>
-                        <img class="w-100" :src="require('../../assets/images/choco-chip-cookies-200x255.jpg')" alt="">
-                        <h6 class="fw-bolder mt-3">Choco Chip Cookies</h6>
-                        <p>$19.00 - $39.00</p>
+                        <img class="w-100" :src="require(`../../assets/images/${element.img}-200x255.jpg`)" :alt="`${element.name} picture`">
+                        <h6 class="fw-bolder mt-3">{{element.name}}</h6>
+                        <p>{{element.price}}</p>
                     </div>
-                    <div class="thumb text-center position-relative">
-                        <div class="w-100  position-absolute my-hover align-items-center justify-content-center">
-                            <p class="text-uppercase">
-                                <a href="#">select options</a>
-                                <span class="text-white mx-1">/</span>
-                                <a href="#">quick view</a>
-                            </p>
-                        </div>
-                        <img class="w-100" :src="require('../../assets/images/strawberry-jam-cookies-200x255.jpg')" alt="">
-                        <h6 class="fw-bolder mt-3">Strawberry Jam Cookies</h6>
-                        <p>$24.00 - $62.00</p>
-                    </div>
-                    <div class="thumb text-center position-relative">
-                        <div class="w-100  position-absolute my-hover align-items-center justify-content-center">
-                            <p class="text-uppercase">
-                                <a href="#">select options</a>
-                                <span class="text-white mx-1">/</span>
-                                <a href="#">quick view</a>
-                            </p>
-                        </div>
-                        <img class="w-100" :src="require('../../assets/images/strawberry-donut-200x255.jpg')" alt="">
-                        <h6 class="fw-bolder mt-3">Strawberry Donut</h6>
-                        <p>$24.00 - $42.00</p>
-                    </div>
-                    <div class="thumb text-center position-relative">
-                        <div class="w-100  position-absolute my-hover align-items-center justify-content-center">
-                            <p class="text-uppercase">
-                                <a href="#">select options</a>
-                                <span class="text-white mx-1">/</span>
-                                <a href="#">quick view</a>
-                            </p>
-                        </div>
-                        <img class="w-100" :src="require('../../assets/images/perfect-macarons-200x255.jpg')" alt="">
-                        <h6 class="fw-bolder mt-3">Perfect Macarons</h6>
-                        <p>$18.00 - $52.00</p>
-                    </div>
-                    <div class="next position-absolute py-4 px-3">
+                    
+                    <div class="next position-absolute py-4 px-3" @click="next()">
                         <font-awesome-icon icon="fa-solid fa-angle-right" class="text-white" />
                     </div>
                 </div>
@@ -77,7 +42,102 @@
 
 <script>
 export default {
-    name: 'FreshlySection'
+    name: 'FreshlySection',
+    data: function(){
+        return{
+            activeElement: 1,
+            sliderItems:[
+                {
+                    name: 'Choco Chip Cookies',
+                    price:'$18.00 - $32.00',
+                    img: 'choco-chip-cookies',
+                    ID: 1
+                },
+                {
+                    name: 'Strawberry Jam Cookies',
+                    price:'$36.00 - $60.00',
+                    img: 'strawberry-jam-cookies',
+                    ID: 1
+                },
+                {
+                    name: 'Strawberry Donut',
+                    price:'$24.00 - $48.00',
+                    img: 'strawberry-donut',
+                    ID: 1                
+                },
+                {
+                    name: 'Perfect Macarons',
+                    price:'$32.00 - $56.00',
+                    img: 'perfect-macarons',
+                    ID: 1
+                },
+                {
+                    name: 'Premium Bread',
+                    price:'$32.00 - $68.00',
+                    img: 'premium-bread',
+                    ID: 2
+                },
+                {
+                    name: 'Cake with Cherry Topping',
+                    price:'$99.00',
+                    img: 'cherry-cake',
+                    ID: 2
+                },
+                {
+                    name: 'Cookies with ice cream',
+                    price:'$18.00 - $34.00',
+                    img: 'cookies-with-ice-cream',
+                    ID: 2
+                },
+                {
+                    name: 'Blackberry Stuffed Bread',
+                    price:'$22.00 - $46.00',
+                    img: 'blackberry-stuffed-bread',
+                    ID: 2
+                },
+                {
+                    name: 'Glazed Bread with Fruits',
+                    price:'$24.00',
+                    img: 'glazed-pancake-with-lemon',
+                    ID: 3
+                },
+                {
+                    name: 'Chocolate Cupcake',
+                    price:'$26.00 - $68.00',
+                    img: 'small-cupcake',
+                    ID: 3
+                },
+                {
+                    name: 'Homemade Bread',
+                    price:'$26.00 - $68.00',
+                    img: 'home-bread',
+                    ID: 3
+                },
+                {
+                    name: 'Choco Chip Cookies',
+                    price:'$18.00 - $32.00',
+                    img: 'choco-chip-cookies',
+                    ID: 3
+                },
+            ]
+        }
+    },
+    methods:{
+        previous(){
+            this.activeElement--
+            if(this.activeElement < 1){
+                this.activeElement = 2
+            }
+        },
+        next(){
+            this.activeElement++
+            if(this.activeElement > 3){
+                this.activeElement = 1
+            }
+            
+        }
+
+    }
 }
 </script>
 
