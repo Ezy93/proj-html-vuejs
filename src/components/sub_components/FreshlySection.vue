@@ -17,25 +17,53 @@
                     <div class="previous position-absolute py-4 px-3">
                         <font-awesome-icon icon="fa-solid fa-angle-left" class="text-white" />
                     </div>
-                    <div class="thumb text-center">
+                    <div class="thumb text-center position-relative">
+                        <div class="w-100  position-absolute my-hover align-items-center justify-content-center">
+                            <p class="text-uppercase">
+                                <a href="#">select options</a>
+                                <span class="text-white mx-1">/</span>
+                                <a href="#">quick view</a>
+                            </p>
+                        </div>
                         <img class="w-100" :src="require('../../assets/images/choco-chip-cookies-200x255.jpg')" alt="">
                         <h6 class="fw-bolder mt-3">Choco Chip Cookies</h6>
                         <p>$19.00 - $39.00</p>
                     </div>
-                    <div class="thumb text-center">
-                        <img class="w-100" :src="require('../../assets/images/choco-chip-cookies-200x255.jpg')" alt="">
-                        <h6 class="fw-bolder mt-3">Choco Chip Cookies</h6>
-                        <p>$19.00 - $39.00</p>
+                    <div class="thumb text-center position-relative">
+                        <div class="w-100  position-absolute my-hover align-items-center justify-content-center">
+                            <p class="text-uppercase">
+                                <a href="#">select options</a>
+                                <span class="text-white mx-1">/</span>
+                                <a href="#">quick view</a>
+                            </p>
+                        </div>
+                        <img class="w-100" :src="require('../../assets/images/strawberry-jam-cookies-200x255.jpg')" alt="">
+                        <h6 class="fw-bolder mt-3">Strawberry Jam Cookies</h6>
+                        <p>$24.00 - $62.00</p>
                     </div>
-                    <div class="thumb text-center">
-                        <img class="w-100" :src="require('../../assets/images/choco-chip-cookies-200x255.jpg')" alt="">
-                        <h6 class="fw-bolder mt-3">Choco Chip Cookies</h6>
-                        <p>$19.00 - $39.00</p>
+                    <div class="thumb text-center position-relative">
+                        <div class="w-100  position-absolute my-hover align-items-center justify-content-center">
+                            <p class="text-uppercase">
+                                <a href="#">select options</a>
+                                <span class="text-white mx-1">/</span>
+                                <a href="#">quick view</a>
+                            </p>
+                        </div>
+                        <img class="w-100" :src="require('../../assets/images/strawberry-donut-200x255.jpg')" alt="">
+                        <h6 class="fw-bolder mt-3">Strawberry Donut</h6>
+                        <p>$24.00 - $42.00</p>
                     </div>
-                    <div class="thumb text-center">
-                        <img class="w-100" :src="require('../../assets/images/choco-chip-cookies-200x255.jpg')" alt="">
-                        <h6 class="fw-bolder mt-3">Choco Chip Cookies</h6>
-                        <p>$19.00 - $39.00</p>
+                    <div class="thumb text-center position-relative">
+                        <div class="w-100  position-absolute my-hover align-items-center justify-content-center">
+                            <p class="text-uppercase">
+                                <a href="#">select options</a>
+                                <span class="text-white mx-1">/</span>
+                                <a href="#">quick view</a>
+                            </p>
+                        </div>
+                        <img class="w-100" :src="require('../../assets/images/perfect-macarons-200x255.jpg')" alt="">
+                        <h6 class="fw-bolder mt-3">Perfect Macarons</h6>
+                        <p>$18.00 - $52.00</p>
                     </div>
                     <div class="next position-absolute py-4 px-3">
                         <font-awesome-icon icon="fa-solid fa-angle-right" class="text-white" />
@@ -87,6 +115,25 @@ export default {
         }
         div.col-9{
             div.my-thumb{
+                div.my-hover{
+                    height: 79%;
+                    display: none;
+                    background-color: rgba( lightgrey, .5);
+                    p{
+                        a{
+                            text-decoration: none;
+                            color: white;
+                        }
+                        a:hover{
+                            color: $Title_color;
+                        }
+                    }
+                }
+                div.thumb:hover{
+                    div.my-hover{
+                        display: flex;
+                    }
+                }
                 div.previous{
                     left: 0;
                 }
@@ -95,6 +142,9 @@ export default {
                     top: 40%;
                     background-color: rgba($perfume,0.5);
                     
+                }
+                div.previous{
+                    z-index: 1;
                 }
                 div.thumb{
                     width: calc(100% / 4);
