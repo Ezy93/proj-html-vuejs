@@ -67,6 +67,12 @@ export default {
                                 text-decoration: none;
                             }
                         }
+                        div.btn:hover{
+                            background-color: $perfume;
+                            a{
+                                color: $Title_color;
+                            }
+                        }
                     }
                 }
                 div.my-corporate:hover{
@@ -89,6 +95,12 @@ export default {
                             background-color: $Title_color;
                             a{
                                 text-decoration: none;
+                            }
+                        }
+                        div.btn:hover{
+                            background-color: $perfume;
+                            a{
+                                color: $Title_color;
                             }
                         }
                     }
